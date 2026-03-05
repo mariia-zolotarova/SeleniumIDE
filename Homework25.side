@@ -1,0 +1,485 @@
+{
+  "id": "88864ce8-2dcc-4e8a-9a80-bd0fe464cbda",
+  "version": "2.0",
+  "name": "Homework25",
+  "url": "https://kasta.ua/",
+  "tests": [{
+    "id": "eb3136ec-6ffc-4c6a-8f50-4de5b28e3310",
+    "name": "Search field",
+    "commands": [{
+      "id": "86bb7c5c-cfd9-4a15-9233-ab8d7cb27c5a",
+      "comment": "",
+      "command": "open",
+      "target": "https://kasta.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00b98d92-837f-4039-afc7-bafd442a9d62",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1214x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf3ddf0a-134b-46ec-89ed-3b1e315b0fcd",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.input-box", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "996c8be0-762e-4aec-84bc-000aed7e2e93",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.input-box", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Кросівки"
+    }, {
+      "id": "85dff609-f75b-49f9-a291-d45192acfe67",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchBtn",
+      "targets": [
+        ["id=searchBtn", "id"],
+        ["css=#searchBtn", "css:finder"],
+        ["xpath=//button[@id='searchBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9c0ac5aa-ea68-4c45-95fb-e95fd9890f45",
+    "name": "Check category menu",
+    "commands": [{
+      "id": "5d594938-cfed-4872-a7a9-f970daa3d6c5",
+      "comment": "",
+      "command": "open",
+      "target": "https://kasta.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3126d4d2-39d3-473e-8ad0-166df4ed3adb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1214x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78c1dea4-a619-44b8-a45e-592134fd0f98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Каталог')]",
+      "targets": [
+        ["css=.menu__label", "css:finder"],
+        ["xpath=//details[@id='menuVertical']/summary/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Каталог')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "157e16b9-265b-4158-a0a4-7922df1d9db2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active > .menu-vertical__link",
+      "targets": [
+        ["linkText=Взуття", "linkText"],
+        ["css=.active > .menu-vertical__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Взуття')]", "xpath:link"],
+        ["xpath=//ul[@id='mk_menu']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/uk/market/obuv/')]", "xpath:href"],
+        ["xpath=//details/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Взуття')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79a98e7c-d9d0-40cd-8b3b-b5e3627e3b7e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='catalogue']/div[2]/div/div/span/span/a/span",
+      "targets": [
+        ["css=span:nth-child(1) > .breadcrumbs_link > span", "css:finder"],
+        ["xpath=//div[@id='catalogue']/div[2]/div/div/span/span/a/span", "xpath:idRelative"],
+        ["xpath=//span/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29cd6ad2-ebc9-4d5e-a872-78658496cec3",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//a[contains(text(),'Взуття')])[2]",
+      "targets": [
+        ["css=.lh-20:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Взуття')])[2]", "xpath:link"],
+        ["xpath=//form[@id='filters']/div[3]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/uk/market/obuv/')])[4]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/a[2]", "xpath:position"]
+      ],
+      "value": "Взуття"
+    }]
+  }, {
+    "id": "456e42ba-7315-43ea-898b-14a136973274",
+    "name": "Checking interaction with filters in the catalog",
+    "commands": [{
+      "id": "f537b0a9-60bc-474b-b383-9f19f2122a1f",
+      "comment": "",
+      "command": "open",
+      "target": "https://kasta.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1d58d4f-5adf-42aa-8568-10665b523daf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1214x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a343425c-2fe5-4e40-b295-7c947ce59e10",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__label",
+      "targets": [
+        ["css=.menu__label", "css:finder"],
+        ["xpath=//details[@id='menuVertical']/summary/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Каталог')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a632fc1-b77a-4c44-b7ff-06a1c909d7ff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Сукні",
+      "targets": [
+        ["linkText=Сукні", "linkText"],
+        ["css=.menu-vertical__item:nth-child(1) .catalog-menu__cols-4 > .catalog-menu__col:nth-child(1) .catalog-menu__link:nth-child(4)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Сукні')])[4]", "xpath:link"],
+        ["xpath=//ul[@id='mk_menu']/li/div/div/div[4]/div/div/div/a[4]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/uk/market/platya/')])[4]", "xpath:href"],
+        ["xpath=//div[4]/div/div/div/a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bdc6a12-fa2e-4a04-99ca-de6724aba259",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Міжнародна')]",
+      "targets": [
+        ["css=.size-tab:nth-child(5)", "css:finder"],
+        ["xpath=//form[@id='filters']/div[4]/div/div/details[3]/div/div[2]/div[2]/label[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Міжнародна')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ca2fc02-f573-4e86-ba07-ad04bfdaf86d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.filters__group:nth-child(6)",
+      "targets": [
+        ["css=.filters__group:nth-child(6)", "css:finder"],
+        ["xpath=//form[@id='filters']/div[4]/div/div/details[3]/div/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "96fefbd2-06ee-4f01-b41d-a83386cbc33b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=M",
+      "targets": [
+        ["linkText=M", "linkText"],
+        ["css=#OnNpemU4fE0 > .block", "css:finder"],
+        ["xpath=//a[contains(text(),'M')]", "xpath:link"],
+        ["xpath=//label[@id='OnNpemU4fE0']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/label[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'M')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4795fb58-623d-4255-a8f0-98987019e31f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[@id='30144705:586-c-add']",
+      "targets": [
+        ["id=30144705:586-c-add", "id"],
+        ["css=#\\33 0144705\\3A 586-c-add", "css:finder"],
+        ["xpath=//button[@id='30144705:586-c-add']", "xpath:attributes"],
+        ["xpath=//article[@id='30144705:586']/div/div/form/div[2]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//article[9]/div/div/form/div[2]/div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "3bfd3e24-81ed-4545-80b9-95cfa2ca8d68",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id='30144705:586-c-add']",
+      "targets": [
+        ["id=30144705:586-c-add", "id"],
+        ["css=#\\33 0144705\\3A 586-c-add", "css:finder"],
+        ["xpath=//button[@id='30144705:586-c-add']", "xpath:attributes"],
+        ["xpath=//article[@id='30144705:586']/div/div/form/div[2]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//article[9]/div/div/form/div[2]/div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a88231c2-9fce-4edd-8b51-94afa55d8002",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//button[contains(.,'M')]",
+      "targets": [
+        ["css=.button:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@name='buy-id'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='popup-container']/div/div/div[2]/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'M')]", "xpath:innerText"]
+      ],
+      "value": "M"
+    }]
+  }, {
+    "id": "19d547a9-9a54-401f-a9de-2ea8bc82f584",
+    "name": "Check login button",
+    "commands": [{
+      "id": "ecd2ce41-e263-48b2-a266-97361054567e",
+      "comment": "",
+      "command": "open",
+      "target": "https://kasta.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a16cef3-e1ca-4eb6-ac60-f2d1268c2417",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1216x810",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55bc0259-d7e1-4923-a38a-98028573607e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.header-profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d19c06c6-fcca-41c3-9a69-e40f01cc4a84",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='hUser']",
+      "targets": [
+        ["id=hUser", "id"],
+        ["css=#hUser", "css:finder"],
+        ["xpath=//div[@id='hUser']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1ff5bd9-5894-40bc-a196-d20973c15d3d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-profile",
+      "targets": [
+        ["css=.header-profile", "css:finder"],
+        ["xpath=//div[@id='hUser']/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39a4c4ed-7d35-4fc3-a773-331408944439",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//button[contains(.,'Увійти')]",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Увійти')]", "xpath:innerText"]
+      ],
+      "value": "Увійти"
+    }]
+  }, {
+    "id": "66d56b2f-3b96-4410-b13c-8d1890d05ab4",
+    "name": "Check copyright notice in footer with the current year",
+    "commands": [{
+      "id": "1ca7fe8a-365f-4eb6-95bf-00dd9a0aee0b",
+      "comment": "",
+      "command": "open",
+      "target": "https://kasta.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf06c581-9de3-460f-8d14-674714222764",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1216x810",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "851631c2-73dc-4c5f-b36b-f4b2826cf921",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#footer",
+      "targets": [
+        ["id=footer", "id"],
+        ["css=#footer", "css:finder"],
+        ["xpath=//footer[@id='footer']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/footer", "xpath:idRelative"],
+        ["xpath=//footer", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "095b0c63-151f-4b19-a452-35bad6cbd063",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.footer_copyright",
+      "targets": [
+        ["css=.footer_copyright", "css:finder"],
+        ["xpath=//footer[@id='footer']/div[2]", "xpath:idRelative"],
+        ["xpath=//footer/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58b50c36-be77-4628-81d0-bde10ed47d7b",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//footer[@id='footer']/div[2]",
+      "targets": [
+        ["css=.footer_copyright", "css:finder"],
+        ["xpath=//footer[@id='footer']/div[2]", "xpath:idRelative"],
+        ["xpath=//footer/div[2]", "xpath:position"]
+      ],
+      "value": "2026"
+    }, {
+      "id": "109bca81-5aae-4d63-b5d0-9350ef8fc072",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.footer_copyright",
+      "targets": [],
+      "value": "2026"
+    }]
+  }, {
+    "id": "0a7a7e85-76e4-432f-8921-f9f05163f8df",
+    "name": "Check Missing Element",
+    "commands": [{
+      "id": "b41b5112-751b-46e5-983b-3467c3e4e82d",
+      "comment": "",
+      "command": "open",
+      "target": "https://kasta.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8499d97d-375d-4014-8f42-8bf44abeedbc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1214x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cebd917-580b-47a0-8c52-6486bf77bb52",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.p-16",
+      "targets": [
+        ["css=.p-16", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c63cdc4-f92b-4b1a-b6db-5b1903fce481",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.fake-element",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51f392d7-032f-4b10-99e1-7f699c63ad53",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//body",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c9ca5e4-947e-4760-a8dd-ea7d82b1a852",
+      "comment": "",
+      "command": "verifyNotText",
+      "target": "css=body",
+      "targets": [],
+      "value": "ERROR"
+    }, {
+      "id": "98462aaa-35c8-45f5-8613-6d7455fcfc3d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=footer",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "36469dd8-dca8-4f27-9ed2-9fb493becfd2",
+    "name": "Navigation Links",
+    "commands": [{
+      "id": "c99bd14a-64b7-48a5-b98b-6cbcad96fc10",
+      "comment": "",
+      "command": "open",
+      "target": "https://kasta.ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15b3d61c-f481-4119-8f4c-ca1a5360adef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dsc__item--women > .dsc__tab",
+      "targets": [
+        ["css=.dsc__item--women > .dsc__tab", "css:finder"],
+        ["xpath=//div[@id='hDiscovery']/a[5]/div", "xpath:idRelative"],
+        ["xpath=//a[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a35c890-b2a5-43a8-97eb-3c156a8029ed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Жінкам",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35ead3d7-3e39-45c7-837c-b9c1c9be8d3b",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.not-existing",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "520ee8fc-94ef-4e42-b22a-3415bc858659",
+      "comment": "",
+      "command": "verifyNotText",
+      "target": "css=body",
+      "targets": [],
+      "value": "Error"
+    }]
+  }],
+  "suites": [{
+    "id": "098549ee-0958-4b79-85f7-7cecfd29d238",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["eb3136ec-6ffc-4c6a-8f50-4de5b28e3310"]
+  }],
+  "urls": ["https://kasta.ua/"],
+  "plugins": []
+}
